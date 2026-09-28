@@ -1,0 +1,93 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e40]:
+    - complementary [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: I
+          - generic [ref=e46]:
+            - generic [ref=e47]: InsightsIQ
+            - generic [ref=e48]: Planning Platform
+        - button "Collapse sidebar" [ref=e49]
+      - button "Search… ⌘K" [ref=e53]:
+        - generic [ref=e57]: Search…
+        - generic [ref=e58]: ⌘K
+      - navigation [ref=e59]:
+        - paragraph [ref=e60]: Workspace
+        - generic [ref=e61]:
+          - link "Dashboard" [ref=e62] [cursor=pointer]:
+            - /url: "#/"
+          - link "Krypton" [ref=e70] [cursor=pointer]:
+            - /url: "#/modules/krypton"
+          - link "Simple Suite" [ref=e74] [cursor=pointer]:
+            - /url: "#/modules/simple-suite"
+          - link "Pempal Live" [ref=e79] [cursor=pointer]:
+            - /url: "#/modules/pempal"
+            - generic [ref=e83]: Pempal
+            - generic [ref=e84]: Live
+        - paragraph [ref=e87]: Resources
+        - link "Documentation" [ref=e88] [cursor=pointer]:
+          - /url: "#"
+        - link "Support" [ref=e91] [cursor=pointer]:
+          - /url: "#"
+        - button "Feedback" [ref=e95]
+        - button "Take a Tour" [ref=e98]
+      - button "D Demo Planner Planner" [ref=e103]:
+        - generic [ref=e104]: D
+        - generic [ref=e105]:
+          - paragraph [ref=e106]: Demo Planner
+          - paragraph [ref=e107]: Planner
+    - generic [ref=e110]:
+      - banner [ref=e111]:
+        - generic [ref=e112]:
+          - button "Collapse sidebar" [ref=e113]
+          - generic [ref=e116]:
+            - generic [ref=e117]: Modules
+            - generic [ref=e218]:
+              - generic [ref=e219]: /
+              - generic [ref=e220]: Pempal
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - button "Brand Athleta Athleta" [ref=e122]:
+              - generic [ref=e125]: Brand
+              - img "Athleta" [ref=e128]
+              - generic [ref=e129]: Athleta
+            - button "Region 🇺🇸 US" [ref=e134]:
+              - generic [ref=e138]: Region
+              - generic [ref=e140]: 🇺🇸
+              - generic [ref=e141]: US
+          - button "Insights Assist" [ref=e145]
+          - button [ref=e149]
+          - generic [ref=e153]:
+            - generic [ref=e154]: Demo Planner
+            - generic [ref=e155]: D
+      - main [ref=e156]:
+        - generic [ref=e221]:
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - generic [ref=e226]:
+                - heading "PEMPAL" [level=1] [ref=e227]
+                - generic [ref=e228]: Live
+                - generic [ref=e230]: · Athleta
+              - paragraph [ref=e231]: Price Execution Management Pre-Approval Layer — in-season promotion planning.
+            - button [ref=e232]:
+              - generic [ref=e235]:
+                - paragraph [ref=e236]: YOY Comparison
+                - paragraph [ref=e237]: WP · LY · LLY
+          - generic [ref=e239]:
+            - button "Summary" [ref=e240]
+            - button "Promo Details" [ref=e242]
+            - button "Audit" [ref=e244]
+            - button "Marketed Rollup" [ref=e246]
+            - button "Fiscal Time" [ref=e248]
+            - button "Hierarchy" [ref=e250]
+            - button "Season Code" [ref=e252]
+  - generic [ref=e200]:
+    - generic [ref=e201]:
+      - generic [ref=e204]: Insights Assist
+      - generic [ref=e205]: BETA
+      - generic [ref=e267]: Summary
+      - button "Close (Esc)" [ref=e206] [cursor=pointer]
+    - paragraph [ref=e212]: AI can make mistakes, please verify before use.
+    - generic [ref=e214]:
+      - paragraph [ref=e215]: Based on live plan data
+      - button "Close" [ref=e216]

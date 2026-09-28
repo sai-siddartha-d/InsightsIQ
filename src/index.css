@@ -1,0 +1,324 @@
+/* src/index.css — Tailwind v4 with full design system */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+
+/* ─────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   In v4, everything inside @theme becomes a CSS variable AND generates
+   matching utility classes. So `--color-primary-600` automatically gives
+   you `bg-primary-600`, `text-primary-600`, `border-primary-600`, etc.
+   ───────────────────────────────────────────────────────────────────── */
+@theme {
+  /* ─── Brand colors — Deep Sapphire Blue ────────────────────────── */
+  --color-primary-50:  #EBF0FB;
+  --color-primary-100: #CEDBF5;
+  --color-primary-200: #A4BFED;
+  --color-primary-300: #6F98DC;
+  --color-primary-400: #4275C8;
+  --color-primary-500: #1B4F9C;
+  --color-primary-600: #163F82;
+  --color-primary-700: #112F68;
+  --color-primary-800: #0C214E;
+  --color-primary-900: #071436;
+  --color-primary-950: #040C22;
+
+  --color-accent-50:  #EEF3FC;
+  --color-accent-100: #D9E6F8;
+  --color-accent-200: #B5CDF1;
+  --color-accent-300: #83ABE6;
+  --color-accent-400: #5B8DD9;
+  --color-accent-500: #3B74C8;
+  --color-accent-600: #2D5EAD;
+  --color-accent-700: #21488E;
+  --color-accent-800: #16326B;
+  --color-accent-900: #0C1E49;
+
+  /* ─── Semantic colors ───────────────────────────────────────────── */
+  --color-success-50:  #ECFDF5;
+  --color-success-100: #D1FAE5;
+  --color-success-500: #10B981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+
+  --color-warning-50:  #FFF8F2;
+  --color-warning-100: #FEEADB;
+  --color-warning-200: #FDD0AA;
+  --color-warning-300: #FBB06A;
+  --color-warning-400: #F8883A;
+  --color-warning-500: #D4651A;
+  --color-warning-600: #B35115;
+  --color-warning-700: #923F10;
+
+  --color-danger-50:  #FEF2F2;
+  --color-danger-100: #FEE2E2;
+  --color-danger-500: #D00000;
+  --color-danger-600: #BC0712;
+  --color-danger-700: #B91C1C;
+
+  --color-info-50:  #EFF6FF;
+  --color-info-100: #DBEAFE;
+  --color-info-500: #3B82F6;
+  --color-info-600: #2563EB;
+  --color-info-700: #1D4ED8;
+
+  /* ─── Neutrals — slightly cooler/blue-tinted ───────────────────── */
+  --color-neutral-50:  #F4F6FB;
+  --color-neutral-100: #EDF0F7;
+  --color-neutral-200: #DDE2EE;
+  --color-neutral-300: #D4D4D8;
+  --color-neutral-400: #A1A1AA;
+  --color-neutral-500: #71717A;
+  --color-neutral-600: #52525B;
+  --color-neutral-700: #3F3F46;
+  --color-neutral-800: #27272A;
+  --color-neutral-900: #18181B;
+  --color-neutral-950: #09090B;
+
+  /* ─── Typography ────────────────────────────────────────────────── */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  /* Custom font sizes with letter-spacing baked in */
+  --text-2xs:  0.6875rem;
+  --text-2xs--line-height: 0.875rem;
+  --text-2xs--letter-spacing: 0.01em;
+
+  --text-xs:   0.75rem;
+  --text-xs--line-height: 1rem;
+
+  --text-sm:   0.8125rem;
+  --text-sm--line-height: 1.25rem;
+
+  --text-base: 0.875rem;
+  --text-base--line-height: 1.5rem;
+  --text-base--letter-spacing: -0.005em;
+
+  --text-lg:   1rem;
+  --text-lg--line-height: 1.5rem;
+  --text-lg--letter-spacing: -0.01em;
+
+  --text-xl:   1.125rem;
+  --text-xl--line-height: 1.625rem;
+  --text-xl--letter-spacing: -0.015em;
+
+  --text-2xl:  1.375rem;
+  --text-2xl--line-height: 1.875rem;
+  --text-2xl--letter-spacing: -0.02em;
+
+  --text-3xl:  1.75rem;
+  --text-3xl--line-height: 2.125rem;
+  --text-3xl--letter-spacing: -0.025em;
+
+  --text-4xl:  2.25rem;
+  --text-4xl--line-height: 2.5rem;
+  --text-4xl--letter-spacing: -0.03em;
+
+  --text-5xl:  3rem;
+  --text-5xl--line-height: 3.25rem;
+  --text-5xl--letter-spacing: -0.035em;
+
+  /* ─── Shadows — multi-layer depth system ────────────────────────── */
+  --shadow-xs:    0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm:    0 1px 2px 0 rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  --shadow-card:  0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+  --shadow-pop:   0 4px 8px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+  --shadow-float: 0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+  --shadow-high:  0 24px 48px -12px rgba(15, 23, 42, 0.18), 0 8px 16px -4px rgba(15, 23, 42, 0.08);
+  --shadow-glow-primary: 0 0 0 4px rgba(27, 79, 156, 0.15);
+  --shadow-glow-accent:  0 0 0 4px rgba(91, 141, 217, 0.2);
+  --shadow-glow-danger:  0 0 0 4px rgba(239, 68, 68, 0.12);
+  --shadow-inner-sm:     inset 0 1px 1px 0 rgba(15, 23, 42, 0.04);
+
+  /* ─── Border radii ──────────────────────────────────────────────── */
+  --radius-sm:  0.375rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  0.625rem;
+  --radius-xl:  0.875rem;
+  --radius-2xl: 1.125rem;
+  --radius-3xl: 1.5rem;
+
+  /* ─── Animations ────────────────────────────────────────────────── */
+  --animate-fade-in:        fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-in-up:     fadeInUp 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-in-down:   fadeInDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-scale-in:       scaleIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-shimmer:        shimmer 1.8s linear infinite;
+  --animate-pulse-soft:     pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  /* ─── Custom easing ─────────────────────────────────────────────── */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ─── App-shell ─────────────────────────────────────────────── */
+  --color-sidebar-from:  #12305E;
+  --color-sidebar-to:    #0C2448;
+  --color-surface:       #F3F6FB;
+  --color-table-header:  #E8EFF8;
+  --color-border-blue:   #C4D3EC;
+}
+
+
+/* ─── Keyframes ─────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.7; }
+}
+
+
+/* ─── Base styles ───────────────────────────────────────────────────── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: var(--color-neutral-50);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-900);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
+  overflow-x: hidden;
+}
+
+
+/* ─── Scrollbars ────────────────────────────────────────────────────── */
+::-webkit-scrollbar         { width: 10px; height: 10px; }
+::-webkit-scrollbar-track   { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-300);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.15s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-400);
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+
+/* ─── Focus rings (handled per-component via shadow-glow utilities) ── */
+*:focus-visible { outline: none; }
+
+
+/* ─── Selection ─────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+
+/* ─── Common transitions ───────────────────────────────────────────── */
+button, a, input, select, textarea, [role="button"] {
+  transition: all 0.15s var(--ease-smooth);
+}
+
+
+/* ─── Custom utilities ──────────────────────────────────────────────── */
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+.bg-dotted {
+  background-image: radial-gradient(circle, var(--color-neutral-300) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.hover-lift {
+  transition: transform 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth);
+}
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ─── Fullscreen panel body — expand charts/tables to fill 95vh modal ──────── */
+/* Applied by Card.jsx when rendering the portal overlay */
+.fullscreen-body {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Immediate children fill the body */
+.fullscreen-body > * {
+  flex: 1;
+  min-height: 0;
+}
+
+/* space-y containers become flex so children can grow */
+.fullscreen-body .space-y-4,
+.fullscreen-body .space-y-5 {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1;
+  gap: 0;
+  min-height: 0;
+}
+
+/* Grid siblings (like stat card rows) stay at natural height */
+.fullscreen-body .space-y-4 > .grid,
+.fullscreen-body .space-y-5 > .grid {
+  flex-shrink: 0;
+}
+
+/* Fixed-height chart containers grow to fill remaining space */
+.fullscreen-body .h-64,
+.fullscreen-body .h-48,
+.fullscreen-body .h-32,
+.fullscreen-body .h-72,
+.fullscreen-body .h-80,
+.fullscreen-body .h-96 {
+  height: auto !important;
+  flex: 1 !important;
+  min-height: 250px;
+}
+
+/* Overflow containers (tables) fill width; vertical scroll handled by fullscreen-body */
+.fullscreen-body .overflow-x-auto {
+  flex: 1;
+  min-height: 0;
+  /* Keep overflow-x: auto from the class itself; don't add overflow-y here
+     so the outer fullscreen-body handles vertical scrolling for nested/expanded rows */
+}
+
+/* Heatmap colored cells — slightly taller in fullscreen for readability */
+.fullscreen-body .h-12 {
+  height: auto !important;
+  min-height: 100px;
+}
+
+/* Tables — use full width in fullscreen panel */
+.fullscreen-body table {
+  min-width: 100%;
+}
+
+/* ─── Animation utilities ───────────────────────────────────────────── */
+.animate-fade-in       { animation: var(--animate-fade-in); }
+.animate-fade-in-up    { animation: var(--animate-fade-in-up); }
+.animate-fade-in-down  { animation: var(--animate-fade-in-down); }
+.animate-scale-in      { animation: var(--animate-scale-in); }
+.animate-shimmer       { animation: var(--animate-shimmer); }
+.animate-pulse-soft    { animation: var(--animate-pulse-soft); }

@@ -1,0 +1,100 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e40]:
+    - complementary [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: I
+          - generic [ref=e46]:
+            - generic [ref=e47]: InsightsIQ
+            - generic [ref=e48]: Planning Platform
+        - button "Collapse sidebar" [ref=e49]
+      - button "Search… ⌘K" [ref=e53]:
+        - generic [ref=e57]: Search…
+        - generic [ref=e58]: ⌘K
+      - navigation [ref=e59]:
+        - paragraph [ref=e60]: Workspace
+        - generic [ref=e61]:
+          - link "Dashboard" [ref=e62] [cursor=pointer]:
+            - /url: "#/"
+          - link "Krypton" [ref=e70] [cursor=pointer]:
+            - /url: "#/modules/krypton"
+          - link "Simple Suite" [ref=e74] [cursor=pointer]:
+            - /url: "#/modules/simple-suite"
+          - link "Pempal Live" [ref=e79] [cursor=pointer]:
+            - /url: "#/modules/pempal"
+            - generic [ref=e83]: Pempal
+            - generic [ref=e84]: Live
+        - paragraph [ref=e87]: Resources
+        - link "Documentation" [ref=e88] [cursor=pointer]:
+          - /url: "#"
+        - link "Support" [ref=e91] [cursor=pointer]:
+          - /url: "#"
+        - button "Feedback" [ref=e95]
+        - button "Take a Tour" [ref=e98]
+      - button "D Demo Planner Planner" [ref=e103]:
+        - generic [ref=e104]: D
+        - generic [ref=e105]:
+          - paragraph [ref=e106]: Demo Planner
+          - paragraph [ref=e107]: Planner
+    - generic [ref=e110]:
+      - banner [ref=e111]:
+        - generic [ref=e112]:
+          - button "Collapse sidebar" [ref=e113]
+          - generic [ref=e116]: Dashboard
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - button "Brand Athleta Athleta" [ref=e122]:
+              - generic [ref=e125]: Brand
+              - img "Athleta" [ref=e128]
+              - generic [ref=e129]: Athleta
+            - button "Region 🇺🇸 US" [ref=e134]:
+              - generic [ref=e138]: Region
+              - generic [ref=e140]: 🇺🇸
+              - generic [ref=e141]: US
+          - button "Insights Assist" [ref=e145]
+          - button [ref=e149]
+          - generic [ref=e153]:
+            - generic [ref=e154]: Demo Planner
+            - generic [ref=e155]: D
+      - main [ref=e156]:
+        - generic [ref=e158]:
+          - generic [ref=e161]:
+            - heading "Welcome back, Demo." [level=1] [ref=e162]
+            - paragraph [ref=e163]: Choose a module to begin your planning workflow.
+          - generic [ref=e164]:
+            - button "K Coming Soon Krypton Pre-season investment-planning tool. View details" [ref=e165]:
+              - generic [ref=e166]:
+                - generic [ref=e167]: K
+                - generic [ref=e168]: Coming Soon
+              - heading "Krypton" [level=3] [ref=e169]
+              - paragraph [ref=e170]: Pre-season investment-planning tool.
+              - generic [ref=e171]: View details
+            - button "S Coming Soon Simple Suite In-season planning and analytics workbench. View details" [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e177]: S
+                - generic [ref=e178]: Coming Soon
+              - heading "Simple Suite" [level=3] [ref=e179]
+              - paragraph [ref=e180]: In-season planning and analytics workbench.
+              - generic [ref=e181]: View details
+            - button "P Live Pempal In-season promotion planning and price execution. Open module" [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: P
+                - generic [ref=e188]: Live
+              - heading "Pempal" [level=3] [ref=e190]
+              - paragraph [ref=e191]: In-season promotion planning and price execution.
+              - generic [ref=e192]: Open module
+          - generic [ref=e196]:
+            - heading "New here?" [level=3] [ref=e197]
+            - paragraph [ref=e198]:
+              - text: Start with the
+              - strong [ref=e199]: Pempal
+              - text: module to explore in-season promotional planning. Krypton and Simple Suite are coming soon.
+  - generic [ref=e200]:
+    - generic [ref=e201]:
+      - generic [ref=e204]: Insights Assist
+      - generic [ref=e205]: BETA
+      - button "Close (Esc)" [ref=e206] [cursor=pointer]
+    - paragraph [ref=e212]: AI can make mistakes, please verify before use.
+    - generic [ref=e214]:
+      - paragraph [ref=e215]: Based on live plan data
+      - button "Close" [ref=e216]
